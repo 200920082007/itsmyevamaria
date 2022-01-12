@@ -418,14 +418,29 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
-            InlineKeyboardButton('Auto Filter', callback_data='autofilter')
+            InlineKeyboardButton('👮‍♂️admin👮‍♂️', callback_data='admin'),
+            InlineKeyboardButton('🔌connect🔌', callback_data='coct'),
+            InlineKeyboardButton('filters', callback_data='auto_manual'),
             ],[
-            InlineKeyboardButton('Connection', callback_data='coct'),
-            InlineKeyboardButton('Extra Mods', callback_data='extra')
+            InlineKeyboardButton('gtrans', callback_data='gtrans'),
+            InlineKeyboardButton('ℹ️infoℹ️', callback_data='info'),
+            InlineKeyboardButton('😃memes😃', callback_data='memes'),
             ],[
-            InlineKeyboardButton('🏠 Home', callback_data='start'),
-            InlineKeyboardButton('🔮 Status', callback_data='stats')
+            InlineKeyboardButton('📋paste📋', callback_data='paste'),
+            InlineKeyboardButton('🔑password gen🔑', callback_data='genpassword'),
+            InlineKeyboardButton('📌pin📌', callback_data='pin'),
+            ],[
+            InlineKeyboardButton('purge', callback_data='purge'),
+            InlineKeyboardButton('restric', callback_data='restric'),
+            InlineKeyboardButton('🔍search🔎', callback_data='search'),
+            ],[
+            InlineKeyboardButton('🎵music🎵', callback_data='music'),
+            InlineKeyboardButton('🎙️tt-speech🎙️', callback_data='tts'),
+            InlineKeyboardButton('🖼️tgraph🖼️', callback_data='tgraph'),
+            ],[
+            InlineKeyboardButton('« 🔙Back🔙', callback_data='start'),
+            InlineKeyboardButton('✂️url shortner✂️', callback_data='shortner'),
+            InlineKeyboardButton('🧟‍♂️zombies🧟‍♂️', callback_data='zombies'),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -434,12 +449,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "about":
-        buttons= [[
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria'),
-            InlineKeyboardButton('♥️ Source', callback_data='source')
+        buttons= = [[
+            InlineKeyboardButton('📃status📃', callback_data='stats'),
+            InlineKeyboardButton('👉source👈', callback_data='source')
             ],[
-            InlineKeyboardButton('🏠 Home', callback_data='start'),
-            InlineKeyboardButton('🔐 Close', callback_data='close_data')
+            InlineKeyboardButton('🔍search movie🔎', switch_inline_query_current_chat='')
+            ],[
+            InlineKeyboardButton('🔥help & commands🔥', callback_data='help')
+            ],[
+            InlineKeyboardButton('« Back', callback_data='start'),
+            InlineKeyboardButton('Close ✗', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
